@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.hardcode.trashbox</groupId>
+   <artifactId>pandora</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <name>pandora</name>
+   <parent>
+     <groupId>com.hardcode.trashbox</groupId>
+     <artifactId>trashbox</artifactId>
+	 <version>development</version>
+     <relativePath />
+   </parent>
+   <properties>
+      <java.source.version>1.8</java.source.version>
+      <java.target.version>1.8</java.target.version>
+      <jclouds.version>1.9.1</jclouds.version>
+   </properties>
+   <dependencies>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>1.0.13</version>
+      </dependency>
+      <!-- <dependency> -->
+      <!-- <groupId>org.apache.jclouds</groupId> -->
+      <!-- <artifactId>jclouds-all</artifactId> -->
+      <!-- <version>${jclouds.version}</version> -->
+      <!-- </dependency> -->
+      <dependency>
+         <groupId>org.apache.jclouds.driver</groupId>
+         <artifactId>jclouds-slf4j</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.api</groupId>
+         <artifactId>openstack-keystone</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.api</groupId>
+         <artifactId>openstack-nova</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.api</groupId>
+         <artifactId>openstack-swift</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.api</groupId>
+         <artifactId>openstack-cinder</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.api</groupId>
+         <artifactId>openstack-trove</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.labs</groupId>
+         <artifactId>openstack-glance</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.labs</groupId>
+         <artifactId>openstack-marconi</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.jclouds.labs</groupId>
+         <artifactId>openstack-neutron</artifactId>
+         <version>${jclouds.version}</version>
+      </dependency>
+   </dependencies>
+   <build>
+      <pluginManagement>
+         <plugins>
+            <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>2.5</version>
+               <configuration>
+                  <source>${java.source.version}</source>
+                  <target>${java.target.version}</target>
+                  <showDeprecation>true</showDeprecation>
+                  <showWarnings>true</showWarnings>
+               </configuration>
+            </plugin>
+         </plugins>
+      </pluginManagement>
+   </build>
+</project>
