@@ -1,1 +1,5 @@
-trashbox/pandora/target
+.classpath
+.project
+.settings
+
+target
